@@ -8,7 +8,7 @@
     tools:context=".Converter" >
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/bottomCurrency"
         android:layout_width="113dp"
         android:layout_height="118dp"
         android:fontFamily="monospace"
@@ -18,23 +18,23 @@
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintHorizontal_bias="0.01"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="81dp"
+        android:id="@+id/topCurrency"
+        android:layout_width="116dp"
         android:layout_height="100dp"
         android:fontFamily="monospace"
-        android:text="$"
+        android:text="USD"
         android:textAlignment="center"
         android:textColor="#2ec0d3"
-        android:textSize="80sp"
+        android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.063" />
@@ -51,16 +51,17 @@
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.818"
+        app:layout_constraintHorizontal_bias="0.963"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.063" />
+        app:layout_constraintVertical_bias="0.061" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/switchCurr"
         android:layout_width="129dp"
         android:layout_height="92dp"
-        android:clickable="false"
+        android:clickable="true"
+        android:onClick="switchCurrencies"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,16 +70,16 @@
         app:srcCompat="@drawable/exchange_arrows_nobg_white" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/conversionRate"
         android:layout_width="300dp"
         android:layout_height="30dp"
         android:shadowColor="@color/white"
-        android:text="1$ = 40000LBP"
+        android:text="1 USD = 40000LBP"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.855"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.199" />
@@ -107,9 +108,9 @@
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintHorizontal_bias="0.796"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.484" />
+        app:layout_constraintVertical_bias="0.499" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
