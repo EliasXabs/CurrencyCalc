@@ -1,10 +1,12 @@
 package com.csc498.currencycalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -12,6 +14,7 @@ import org.w3c.dom.Text;
 public class Converter extends AppCompatActivity {
 
     boolean reversed = false;
+    boolean darkmode = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +61,29 @@ public class Converter extends AppCompatActivity {
             bottom_ele.setText("LBP");
 
             reversed = false;
+        }
+    }
+
+    public void switchTheme(View view){
+
+        ImageView theme = (ImageView) findViewById(R.id.converterTheme);
+        ConstraintLayout page = (ConstraintLayout) findViewById(R.id.page2);
+        TextView rate_ele = (TextView) findViewById(R.id.conversionRate);
+
+        if (darkmode){
+            theme.setImageResource(R.drawable.lightmode_nobg);
+            page.setBackgroundColor(getResources().getColor(R.color.bg_Light));
+            rate_ele.setTextColor(getResources().getColor(R.color.black));
+
+            darkmode = false;
+        }
+        else{
+            theme.setImageResource(R.drawable.darkmode_nobg);
+            page.setBackgroundColor(getResources().getColor(R.color.bg_Dark));
+            rate_ele.setTextColor(getResources().getColor(R.color.white));
+
+
+            darkmode = true;
         }
     }
 }
